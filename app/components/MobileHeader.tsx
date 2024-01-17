@@ -3,14 +3,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+import Link from "next/link";
 import * as React from "react";
+import styles from "../page.module.css";
 import GoogleLoginButton from "./GoogleLoginBtn";
+interface NavbarItem {
+  name: string;
+  url: string;
+}
 interface Props {
-  navItems: string[];
+  navItems: NavbarItem[];
 }
 const drawerWidth = 240;
 
@@ -30,15 +32,23 @@ export const MobileHeader = ({ navItems }: Props) => {
       justifyContent="space-between"
       sx={{ height: "100vh" }}
     >
-      <List>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        rowGap={3}
+        sx={{ pt: 3, pb: 3 }}
+      >
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          <Link
+            key={item.name}
+            href={item.url}
+            className={styles.navbarItemMobile}
+          >
+            {item.name}
+          </Link>
         ))}
-      </List>
+      </Box>
       <GoogleLoginButton />
     </Box>
   );

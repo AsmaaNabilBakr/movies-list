@@ -1,16 +1,6 @@
 body {
   background-color: #212121;
 }
-.logo {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+a {
   text-decoration: none;
-  span {
-    color: red;
-  }
-}
-
-.navbar {
-  background-color: #181818 !important;
 }
