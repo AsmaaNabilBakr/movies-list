@@ -1,8 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import firebase from "firebase/compat/app";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { store } from "../store";
-import { useDispatch } from "react-redux";
 
 interface AuthState {
   user: firebase.User | null;
