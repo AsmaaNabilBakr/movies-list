@@ -12,3 +12,22 @@ export const TrendingMovies = async (page: number) => {
   const all = store.getState().movies.allMovies;
   return all;
 };
+
+export interface User {
+  displayName: string;
+  photoURL: string;
+  id: string;
+}
+
+export interface Movie {
+  media_type: string;
+  poster_path: string;
+  id: number;
+  original_name: string;
+  original_title: string;
+  overview: string;
+}
+
+export interface MoviesList {
+  movies: Movie[];
+}

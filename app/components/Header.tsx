@@ -9,7 +9,6 @@ import NavList from "./navList";
 
 const navItems = [
   { name: "Browse", url: "/" },
-  { name: "Movies", url: "/movies" },
   { name: "Watch List", url: "/watchlist" },
 ];
 

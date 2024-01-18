@@ -21,7 +21,6 @@ export default function MovieDetailsCard({ movie = {} }: any) {
     }`;
   };
   const open = Boolean(anchorEl);
-  console.log("movie", movie);
   const addToWishList = () => {
     const options = {
       method: "POST",

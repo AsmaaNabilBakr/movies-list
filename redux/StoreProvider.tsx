@@ -14,7 +14,6 @@ export const StoreProvider = ({ children }: { children: React.ReactNode }) => {
         store.dispatch(setUser(null));
       }
     });
-    console.log("user details", store.getState().auth.user);
 
     return () => {
       unsubscribe();

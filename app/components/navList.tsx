@@ -10,7 +10,6 @@ interface Props {
 
 const NavList = ({ navItems, deviceType = "" }: Props) => {
   const pathname = usePathname();
-  console.log(pathname);
   return navItems.map((item) => (
     <Link
       key={item.name}

@@ -33,7 +33,6 @@ export const LazyLoad = (props: any) => {
     console.log;
   }, [pageNumber]);
   const movies = useSelector((state: any) => state.movies.movies);
-  console.log("allMovies", movies);
   return (
     <Box display="block" sx={{ width: "100vw" }}>
       <Slider {...settingsWithLazyLoad}>
