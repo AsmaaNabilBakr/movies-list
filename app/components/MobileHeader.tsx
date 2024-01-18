@@ -3,10 +3,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Link from "next/link";
 import * as React from "react";
-import styles from "../page.module.css";
 import GoogleLoginButton from "./GoogleLoginBtn";
+import NavList from "./navList";
 interface NavbarItem {
   name: string;
   url: string;
@@ -37,17 +36,9 @@ export const MobileHeader = ({ navItems }: Props) => {
         flexDirection="column"
         alignItems="center"
         rowGap={3}
-        sx={{ pt: 3, pb: 3 }}
+        sx={{ pt: 3, pb: 3, width: "100%" }}
       >
-        {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.url}
-            className={styles.navbarItemMobile}
-          >
-            {item.name}
-          </Link>
-        ))}
+        <NavList navItems={navItems} deviceType="mobile" />
       </Box>
       <GoogleLoginButton />
     </Box>

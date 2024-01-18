@@ -13,8 +13,33 @@
 .navbarItem {
   color: #fff;
   font-weight: 600;
+  padding: 7px 10px;
+  width: fit-content;
+  text-align: center;
+  &.active {
+    border-bottom: 2px solid #fff;
+    background-color: #ffffff26;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  &.mobile {
+    color: #181818;
+    width: 100%;
+
+    &.active {
+      border-color: #181818;
+      background-color: #18181826;
+    }
+  }
 }
-.navbarItemMobile {
-  color: #181818;
-  font-weight: 600;
+.imageCardContainer {
+  .imageCard {
+    width: 95%;
+    height: auto;
+  }
+  .addtoListBtn {
+    position: absolute;
+    top: 5px;
+    margin-left: 5px;
+  }
 }

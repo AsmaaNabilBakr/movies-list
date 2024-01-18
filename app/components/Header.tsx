@@ -5,9 +5,11 @@ import Link from "next/link";
 import styles from "../page.module.css";
 import GoogleLoginButton from "./GoogleLoginBtn";
 import MobileHeader from "./MobileHeader";
+import NavList from "./navList";
 
 const navItems = [
   { name: "Browse", url: "/" },
+  { name: "Movies", url: "/movies" },
   { name: "Watch List", url: "/watchlist" },
 ];
 
@@ -34,16 +36,9 @@ export default function DrawerAppBar() {
               columnGap={4}
               sx={{ display: { xs: "none", sm: "flex" } }}
             >
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.url}
-                  className={styles.navbarItem}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <NavList navItems={navItems} />
             </Box>
+
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <GoogleLoginButton />
             </Box>

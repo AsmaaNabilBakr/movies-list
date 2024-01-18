@@ -1,11 +1,13 @@
+import { Box, Grid } from "@mui/material";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import { StoreProvider } from "../redux/StoreProvider";
-import { Grid, Box } from "@mui/material";
-import "./globals.css";
 import Header from "./components/Header";
-import { fetchData } from "@/redux/slices/moviesSlice";
-import { store } from "@/redux/store";
+import "./globals.css";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <StoreProvider>
       <html lang="en">
@@ -27,8 +28,10 @@ export default function RootLayout({
           <Box sx={{ flexGrow: 1 }}>
             <Grid container>
               <Header />
-              {children}
-              </Grid>
+              <div className="content-container">
+                <Suspense fallback={<Loading />}>{children}</Suspense>
+              </div>
+            </Grid>
           </Box>
         </body>
       </html>

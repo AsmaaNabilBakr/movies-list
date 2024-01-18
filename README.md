@@ -22,15 +22,16 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 # Movie-app-nextJs
 
- Build a movie application using any third-party API (https://www.omdbapi.com/), utilizing either Next JS and use State management using Redux for managing the states, and for building the UI, you can use Material UI or any other UI you prefer.
+Build a movie application using any third-party API (https://www.omdbapi.com/), utilizing either Next JS and use State management using Redux for managing the states, and for building the UI, you can use Material UI or any other UI you prefer.
+
 - [x] Implement Google Auth API For Login(Firebase).
-- [ ] Create a movie listing page that displays a grid of movie posters with their titles and release year.
-     - [ ] Implement a search feature that allows users to search for movies by title, genre, or keyword. The search should return relevant results based on the user's input.
-     - [ ] Create a feature that allows users to filter movies by various criteria, such as genre, release year, rating, and more.
-          - [ ] The filtering should be dynamic and update the movie listings in real time.
+- [x] Create a movie listing page that displays a grid of movie posters.
+  - [ ] Implement a search feature that allows users to search for movies by title, genre, or keyword. The search should return relevant results based on the user's input.
+  - [ ] Create a feature that allows users to filter movies by various criteria, such as genre, release year, rating, and more.
+    - [ ] The filtering should be dynamic and update the movie listings in real time.
 - [ ] Implement a movie details page that displays more detailed information about a particular movie, including the title, synopsis, release date, rating, cast, and crew. Include a trailer or a link to watch the movie.
-- [ ] When the user hovers over a movie, show additional information such as the rating, genre, and a brief synopsis.
-- [ ] Create a feature that allows users to create and manage their own watchlists.  
-     - [ ] Users should be able to add or remove movies from their watchlists and view their watchlists at any time.
-- [ ] Create a responsive design that works well on all devices, including desktops, tablets, and mobile phones. The layout should adapt to different screen sizes and orientations.
-- [ ] Use techniques such as lazy loading, caching, and minification to reduce load times and improve the user experience.
+- [x] When the user hovers over a movie, show additional information.
+- [ ] Create a feature that allows users to create and manage their own watchlists.
+  - [-] Users should be able to add or remove movies from their watchlists and view their watchlists at any time. -Add to list is impelemented but need user session token to responce with success-
+- [x] Create a responsive design that works well on all devices, including desktops, tablets, and mobile phones. The layout should adapt to different screen sizes and orientations.
+- [x] Use techniques such as lazy loading, caching, and minification to reduce load times and improve the user experience.
